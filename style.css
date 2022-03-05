@@ -10,6 +10,7 @@
   --gray: hsl(225deg 40% 83%);
   --white: hsl(0deg 0% 100%);
   --error: hsl(0deg 96% 61%);
+  --border-radius: 28px;
 }
 
 *,
@@ -46,6 +47,7 @@ p {
   font-size: 1.8rem;
   line-height: 28px;
   font-weight: 300;
+  color: var(--gray);
 }
 
 button {
@@ -53,21 +55,105 @@ button {
   font-weight: 700;
   background: var(--primary-color);
   padding: 9px 27px;
-  border-radius: 28px;
+  border-radius: var(--border-radius);
   border: none;
   outline: none;
+  cursor: pointer;
 }
 
 button:hover {
   background: var(--primary-color-hover);
 }
 
+input {
+  border-radius: var(--border-radius);
+  border: none;
+  outline: none;
+  padding: 14px 32px;
+  background: var(--secondary-dark);
+  color: var(--white);
+  font-weight: 700;
+}
+
+input::placeholder {
+  color: var(--secondary-light);
+  font-weight: 700;
+}
+
 main {
+  --padding-vertical: 130px;
+  max-width: 1700px;
+  margin: auto;
   display: flex;
   flex-direction: column;
-  padding: 130px;
+  height: 100%;
+  padding: var(--padding-vertical);
   padding-left: 165px;
   padding-right: 0;
+  position: relative;
+  background: url(assets/desktop/image-host.jpg);
+  background-repeat: no-repeat;
+  background-position: right top var(--padding-vertical);
+  background-size: auto calc(100% - var(--padding-vertical) * 2);
+}
+
+.logo {
+  transform: translateY(-50%);
+}
+
+.main-content {
+  margin-top: auto;
+  /* TODO: fix max width */
+  max-width: 760px;
+  padding-top: 88px;
+  padding-right: 58px;
+  background: var(--black);
+}
+
+.primary-heading {
+  color: var(--primary-color);
+  margin-bottom: 24px;
+}
+
+.primary-heading span {
+  color: var(--white);
+}
+
+.main-description {
+  max-width: 445px;
+  margin-bottom: 40px;
+}
+
+.main-form {
+  max-width: 430px;
+  margin-bottom: 60px;
+  position: relative;
+}
+
+.main-form input {
+  width: 100%;
+  padding-right: 170px;
+}
+
+.main-form button {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  bottom: 5px;
+  z-index: 2;
+}
+
+.logos {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+
+.pattern {
+  position: absolute;
+  bottom: var(--padding-vertical);
+  right: 0;
+  transform: translateY(50%);
 }
 
 /* MEDIA QUERIES */

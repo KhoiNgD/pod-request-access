@@ -1,0 +1,80 @@
+@import url("https://fonts.googleapis.com/css2?family=Chivo:wght@300;700&display=fallback");
+
+:root {
+  /* COLORS */
+  --primary-color: hsl(157deg 74% 62%);
+  --primary-color-hover: hsl(157deg 100% 85%);
+  --secondary-dark: hsl(225deg 26% 23%);
+  --secondary-light: hsl(225deg 21% 45%);
+  --black: hsl(224deg 35% 11%);
+  --gray: hsl(225deg 40% 83%);
+  --white: hsl(0deg 0% 100%);
+  --error: hsl(0deg 96% 61%);
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Chivo", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  background: var(--black);
+}
+
+h1 {
+  font-size: 5.2rem;
+  line-height: 62px;
+  font-weight: 300;
+  text-transform: uppercase;
+}
+
+p {
+  font-size: 1.8rem;
+  line-height: 28px;
+  font-weight: 300;
+}
+
+button {
+  color: var(--black);
+  font-weight: 700;
+  background: var(--primary-color);
+  padding: 9px 27px;
+  border-radius: 28px;
+  border: none;
+  outline: none;
+}
+
+button:hover {
+  background: var(--primary-color-hover);
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  padding: 130px;
+  padding-left: 165px;
+  padding-right: 0;
+}
+
+/* MEDIA QUERIES */
+/* Tablet */
+@media (max-width: 1100px) {
+}
+
+/* Mobile */
+@media (max-width: 550px) {
+}

@@ -1,6 +1,6 @@
 # Frontend Mentor - Pod request access landing page solution
 
-This is a solution to the [Pod request access landing page challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/pod-request-access-landing-page-eyTmdkLSG). Frontend Mentor challenges help you improve your coding skills by building realistic projects.
+This is a solution to the [Pod request access landing page challenge on Frontend Mentor](https://www.frontendmentor.io/solutions/responsive-landing-page--rgXT4dhf). Frontend Mentor challenges help you improve your coding skills by building realistic projects.
 
 ## Table of contents
 
@@ -34,8 +34,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: [Visit](https://github.com/KhoiNgD/pod-request-access)
+- Live Site URL: [Visit](https://khoind-pod-request-access.netlify.app/)
 
 ## My process
 

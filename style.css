@@ -50,6 +50,12 @@ p {
   color: var(--gray);
 }
 
+input,
+button {
+  font: inherit;
+  font-size: 1.4rem;
+}
+
 button {
   color: var(--black);
   font-weight: 700;
@@ -69,7 +75,7 @@ input {
   border-radius: var(--border-radius);
   border: none;
   outline: none;
-  padding: 14px 32px;
+  padding: 20px 32px;
   background: var(--secondary-dark);
   color: var(--white);
   font-weight: 700;
@@ -83,15 +89,15 @@ input::placeholder {
 main {
   --padding-vertical: 130px;
   max-width: 1700px;
+  min-height: calc(640px + var(--padding-vertical) * 2);
   margin: auto;
   display: flex;
   flex-direction: column;
   height: 100%;
   padding: var(--padding-vertical);
   padding-left: 165px;
-  padding-right: 0;
   position: relative;
-  background: url(assets/desktop/image-host.jpg);
+  background-image: url(assets/desktop/image-host.jpg);
   background-repeat: no-repeat;
   background-position: right top var(--padding-vertical);
   background-size: auto calc(100% - var(--padding-vertical) * 2);
@@ -103,7 +109,6 @@ main {
 
 .main-content {
   margin-top: auto;
-  /* TODO: fix max width */
   max-width: 760px;
   padding-top: 88px;
   padding-right: 58px;
@@ -146,6 +151,7 @@ main {
 .logos {
   display: flex;
   align-items: center;
+  opacity: 0.6;
   gap: 40px;
 }
 
@@ -159,8 +165,104 @@ main {
 /* MEDIA QUERIES */
 /* Tablet */
 @media (max-width: 1100px) {
+  h1 {
+    font-size: 4.8rem;
+  }
+
+  main {
+    --padding-vertical: 0;
+    max-width: 768px;
+    margin: auto;
+    padding-left: 40px;
+    padding-top: 50px;
+    background-image: url(assets/tablet/image-host.jpg);
+    background-position: right top;
+    justify-content: space-between;
+  }
+
+  .main-content {
+    max-width: 635px;
+    padding-top: 92px;
+    padding-right: 0;
+    margin-top: revert;
+  }
+
+  .logo {
+    transform: revert;
+  }
+
+  .pattern {
+    position: relative;
+    transform: none;
+    z-index: -1;
+  }
 }
 
 /* Mobile */
 @media (max-width: 550px) {
+  html {
+    font-size: 50%;
+  }
+
+  h1 {
+    font-size: 4.6rem;
+    line-height: 1.4;
+  }
+
+  main {
+    justify-content: center;
+    padding: 62px 24px 94px;
+    background-image: linear-gradient(
+        hsl(224deg 35% 11% / 0.9),
+        hsl(224deg 35% 11% / 0.9)
+      ),
+      url(assets/mobile/image-host.jpg);
+    background-size: cover;
+  }
+
+  .logo,
+  .main-description {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .main-content {
+    display: flex;
+    flex-direction: column;
+    background: none;
+    text-align: center;
+  }
+
+  .main-description {
+    max-width: 425px;
+    margin-bottom: 32px;
+  }
+
+  .main-form {
+    order: 4;
+    margin-bottom: 0;
+  }
+
+  .main-form input {
+    width: 100%;
+    padding-right: 0;
+  }
+
+  .main-form button {
+    position: revert;
+    width: 100%;
+    margin-top: 16px;
+    padding-top: 18px;
+    padding-bottom: 18px;
+  }
+
+  .pattern {
+    display: none;
+  }
+
+  .logos {
+    gap: revert;
+    justify-content: space-between;
+    margin-bottom: 40px;
+  }
 }

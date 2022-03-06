@@ -32,8 +32,11 @@
         </p>
 
         <form class="main-form">
-          <input type="email" placeholder="Email address" />
-          <button>Request access</button>
+          <input id="input" type="email" placeholder="Email address" />
+          <div id="error" style="display: none">
+            Oops! Please check your email
+          </div>
+          <button id="btn">Request access</button>
         </form>
 
         <div class="logos">
@@ -67,5 +70,25 @@
         <img src="assets/desktop/bg-pattern-dots.svg" />
       </div>
     </main>
+
+    <script>
+      const input = document.getElementById("input");
+      const error = document.getElementById("error");
+      const button = document.getElementById("btn");
+
+      const validateEmail = (email) => {
+        const regex =
+          /^(([^<>()[\]\.,;:\s@\"]+(\.[^<>()[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i;
+        return regex.test(email);
+      };
+
+      button.addEventListener("click", function (e) {
+        e.preventDefault();
+        error.style.display = "none";
+        if (!validateEmail(input.value)) {
+          error.style.display = "block";
+        }
+      });
+    </script>
   </body>
 </html>

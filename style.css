@@ -140,6 +140,15 @@ main {
   padding-right: 170px;
 }
 
+#error {
+  color: var(--error);
+  font-size: 1.4rem;
+  font-weight: 700;
+  position: absolute;
+  bottom: -22px;
+  left: 32px;
+}
+
 .main-form button {
   position: absolute;
   top: 5px;
